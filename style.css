@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.item_1 {
+  background: url(./amal-20190527123416-600x337.jpg) center/cover no-repeat;
+}
+.item_2 {
+  background: red;
+}
+.item_3 {
+  background: orange;
+}
+.item_4 {
+  background: green;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "one one two three three"
+      "one one four five five"
+      "six seven seven five five"
+      "six eight nine nine ten";
+  }
+  .item_1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(./amal-20190527123416-600x337.jpg) center/cover no-repeat;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    color: white;
+    font-size: 60px;
+
+    grid-area: one;
+  }
+  .item_2 {
+    background: yellow;
+    grid-area: two;
+  }
+  .item_3 {
+    background: green;
+    grid-area: three;
+  }
+  .item_4 {
+    background: purple;
+    grid-area: four;
+  }
+  .item_5 {
+    background: chocolate;
+    grid-area: five;
+  }
+  .item_6 {
+    background: pink;
+    grid-area: six;
+  }
+  .item_7 {
+    background: skyblue;
+    grid-area: seven;
+  }
+  .item_8 {
+    background: blue;
+    grid-area: eight;
+  }
+  .item_9 {
+    background: aqua;
+    grid-area: nine;
+  }
+  .item_10 {
+    background: chartreuse;
+    grid-area: ten;
+  }
+}
